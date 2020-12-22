@@ -1,0 +1,14 @@
+type GeoLoc{
+    latitude: Float!
+    longitude: Float!
+}
+
+type Flight{
+    name: String!
+    city: String!
+    country: String!
+    iata_code: String!
+    geoloc: GeoLoc!
+    links_count: Int
+    objectID: String
+}

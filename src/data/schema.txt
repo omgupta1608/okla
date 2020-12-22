@@ -1,0 +1,24 @@
+***FLIGHT SCHEMA*****
+flight id
+flight number
+isdirect
+source
+destination
+departuretime
+arrivaltime
+isActive
+intermediateDestinations (if isDirect is false then array of strings else is empty array)
+
+***AIRPORTS SCHEMA***
+{
+    "name": "Denver Intl",
+    "city": "Denver",
+    "country": "United States",
+    "iata_code": "DEN",
+    "_geoloc": {
+      "lat": 39.861656,
+      "lng": -104.673178
+    },
+    "links_count": 735,
+    "objectID": "3751"
+  }
