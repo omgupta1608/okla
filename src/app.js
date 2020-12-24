@@ -1,8 +1,8 @@
 const express = require('express'),
     app = express(),
-    { ApolloServer } = require('apollo-server-express');
+    { ApolloServer } = require('apollo-server-express'),
+    dotenv = require('dotenv');
 
-const dotenv = require('dotenv');
 dotenv.config();
 
 const cors = require('cors');
@@ -10,9 +10,7 @@ const cors = require('cors');
 app.use(cors());
 
 start = async () => {
-
     let schema = await require('./graphQL/schema')();
-
     const server = new ApolloServer({
         typeDefs: schema,
         debug: true,
@@ -25,7 +23,8 @@ start = async () => {
     });
 
     app.get('/health', (req, res) => {
-        res.sendStatus(200);
+        const { dbInstance } = require('./utils/index');
+        dbInstance.connect();
     });
     app.listen(
         { port: process.env.PORT },

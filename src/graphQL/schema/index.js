@@ -1,5 +1,5 @@
 const { gql } = require('apollo-server-express');
-const { importTypes } = require('../../utils');
+const { importTypes } = require('../../utils/middlewares');
 
 const stitchSchema = () => {
     return new Promise((resolve, reject) => {

@@ -7,7 +7,15 @@ destination
 departuretime
 arrivaltime
 isActive
-intermediateDestinations (if isDirect is false then array of strings else is empty array)
+stop
+company
+economyPrice
+firstClassPrice
+businessClassPrice
+totalSeats
+emptySeats
+isDelayed
+isCancelled
 
 ***AIRPORTS SCHEMA***
 {
@@ -22,3 +30,24 @@ intermediateDestinations (if isDirect is false then array of strings else is emp
     "links_count": 735,
     "objectID": "3751"
   }
+
+
+****USERS SCHEMA*****
+userid
+name
+email
+phone
+password (encrypt)
+balance
+isActive
+home
+currentLocation
+
+
+*****TRIP SCHEMA****
+tid
+userid
+fid
+mealOption (veg nonveg)
+class
+seatno
