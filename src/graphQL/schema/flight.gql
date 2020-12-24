@@ -1,0 +1,24 @@
+type Flight{
+    fId: String!
+    fNumber: String!
+    isDirect: Int!
+    source: String!
+    destination: String!
+    departure: String!
+    arrival: String!
+    isActive: Int!
+    stop: String!
+    company: String!
+    economyPrice: Int!
+    firstClassPrice: Int!
+    businessClassPrice: Int!
+    totalSeats: Int!
+    emptySeats: Int!
+    isDelayed: Int!
+    isCancelled: Int!
+}
+
+extend type Query{
+    getAllFlights: String!
+    getFlightByNumber(Number: String): String!
+}

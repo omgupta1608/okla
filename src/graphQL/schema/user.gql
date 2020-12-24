@@ -1,0 +1,16 @@
+type User{
+    userId: String!
+    name: String!
+    email: String!
+    phone: String!
+    password: String!
+    balance: Int!
+    isActive: Int!
+    home: String!
+    currentLocation: String!
+}
+
+extend type Query{
+    getUserById(ID: String!): String!
+    getAllUsers: String!
+}

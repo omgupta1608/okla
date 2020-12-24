@@ -5,9 +5,10 @@ const stitchSchema = () => {
     return new Promise((resolve, reject) => {
         const schema = gql`
             ${importTypes('/schema/airport.gql')}
-            type Query{
-                test: String
-            }
+            ${importTypes('/schema/flight.gql')}
+            ${importTypes('/schema/user.gql')}
+            ${importTypes('/schema/trip.gql')}
+            type Query
         `;
         resolve(schema);
     });

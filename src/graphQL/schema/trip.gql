@@ -1,0 +1,14 @@
+type Trip{
+    tId: String!
+    userId: String!
+    fId: String!
+    mealOption: String!
+    class: String!
+    seatNo: String!
+}
+
+extend type Query{
+    getAllTrips: String!
+    getUserTrips(userid: String!): String!
+    getTripById(ID: String!): String!
+}

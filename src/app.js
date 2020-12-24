@@ -11,11 +11,15 @@ app.use(cors());
 
 start = async () => {
     let schema = await require('./graphQL/schema')();
+    let { database, initialize } = require('./services/database');
+    initialize();
     const server = new ApolloServer({
         typeDefs: schema,
+        resolvers: require('./graphQL/resolvers'),
         debug: true,
         introspection: true,
-        playground: true
+        playground: true,
+        formatError: require('./utils/error').formatGQLError
     });
 
     server.applyMiddleware({
@@ -23,8 +27,7 @@ start = async () => {
     });
 
     app.get('/health', (req, res) => {
-        const { dbInstance } = require('./utils/index');
-        dbInstance.connect();
+        res.sendStatus(200);
     });
     app.listen(
         { port: process.env.PORT },

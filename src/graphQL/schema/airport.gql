@@ -3,7 +3,7 @@ type GeoLoc{
     longitude: Float!
 }
 
-type Flight{
+type Airport{
     name: String!
     city: String!
     country: String!
@@ -11,4 +11,9 @@ type Flight{
     geoloc: GeoLoc!
     links_count: Int
     objectID: String
+}
+
+extend type Query{
+    getAllAirports: String
+    getAirportById(Id: String): String
 }
