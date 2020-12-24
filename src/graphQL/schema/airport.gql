@@ -9,8 +9,8 @@ type Airport{
     country: String!
     iata_code: String!
     geoloc: GeoLoc!
-    links_count: Int
-    objectID: String
+    links_count: Int!
+    aid: String!
 }
 
 extend type Query{

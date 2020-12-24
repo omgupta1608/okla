@@ -1,6 +1,6 @@
 type Trip{
     tId: String!
-    userId: String!
+    userid: String!
     fId: String!
     mealOption: String!
     class: String!
