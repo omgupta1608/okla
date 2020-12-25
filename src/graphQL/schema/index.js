@@ -8,7 +8,9 @@ const stitchSchema = () => {
             ${importTypes('/schema/flight.gql')}
             ${importTypes('/schema/user.gql')}
             ${importTypes('/schema/trip.gql')}
+            ${importTypes('/schema/misc.gql')}
             type Query
+            type Mutation
         `;
         resolve(schema);
     });

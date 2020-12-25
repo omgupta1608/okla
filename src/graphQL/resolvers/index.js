@@ -1,6 +1,6 @@
 const { airportQueries } = require('./airport'),
     { flightQueries } = require('./flight'),
-    { userQueries } = require('./user'),
+    { userQueries, userMutations } = require('./user'),
     { tripQueries } = require('./trip');
 
 module.exports = {
@@ -9,5 +9,8 @@ module.exports = {
         ...flightQueries,
         ...userQueries,
         ...tripQueries
+    },
+    Mutation: {
+        ...userMutations
     }
 }

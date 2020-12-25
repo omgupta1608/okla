@@ -1,0 +1,10 @@
+type Response{
+    message: String!
+    status: String!
+    method: String!
+}
+
+type AuthResponse{
+    message: String!
+    accessToken: String!
+}

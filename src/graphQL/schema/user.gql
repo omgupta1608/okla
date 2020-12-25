@@ -10,7 +10,21 @@ type User{
     currentLocation: String!
 }
 
+input SignUpInfo{
+    name: String!
+    email: String!
+    phone: String!
+    password: String!
+    home: String!
+    currentLocation: String!
+}
+
 extend type Query{
     getUserById(ID: String!): User!
     getAllUsers: [User!]!
+}
+
+extend type Mutation{
+    login(email: String!, password: String!): AuthResponse!
+    signUp(info: SignUpInfo!): AuthResponse!
 }

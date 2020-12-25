@@ -1,8 +1,8 @@
 # Okla - Airline Ticketing API
 
 ## Features
- - Login
- - Sign Up
+ - Login ✔
+ - Sign Up ✔
  - View Flights ✔
  - View Airports ✔
  - Book Trip
