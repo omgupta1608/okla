@@ -3,10 +3,11 @@ const { Sequelize } = require('sequelize'),
 class Database {
     #database
     constructor() {
-        this.#database = new Sequelize('okla', 'root', '', {
+        let ENV = process.env;
+        this.#database = new Sequelize(ENV.DB_NAME, ENV.DB_USER, ENV.DB_PASS, {
             dialect: 'mysql',
-            host: 'localhost',
-            define:{
+            host: ENV.DB_HOST,
+            define: {
                 freezeTableName: true,
                 timestamps: false
             },
@@ -24,7 +25,7 @@ class Database {
             Error(error, 'Cannot connect to DB', 'database.js');
         }
     }
-    get sequelize(){
+    get sequelize() {
         return this.#database;
     }
 }
