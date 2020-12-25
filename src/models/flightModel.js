@@ -4,7 +4,8 @@ const sequelize = require('../services/database').sequelize;
 const FlightModel = {
     fId: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        primaryKey:true
     },
     fNumber: {
         type: DataTypes.STRING,

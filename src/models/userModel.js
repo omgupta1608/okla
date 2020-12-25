@@ -2,9 +2,10 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../services/database').sequelize;
 
 const UserModel = {
-    userid: {
+    uId: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        primaryKey:true
     },
     name: {
         type: DataTypes.STRING,

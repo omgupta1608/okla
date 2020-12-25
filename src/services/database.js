@@ -7,7 +7,8 @@ class Database {
             dialect: 'mysql',
             host: 'localhost',
             define:{
-                freezeTableName: true
+                freezeTableName: true,
+                timestamps: false
             },
             sync: {
                 force: false

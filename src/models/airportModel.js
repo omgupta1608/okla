@@ -32,7 +32,8 @@ const AirportModel = {
     },
     aid: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        primaryKey:true
     }
 }
 

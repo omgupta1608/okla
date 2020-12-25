@@ -3,9 +3,10 @@ const sequelize = require('../services/database').sequelize;
 const TripModel = {
     tid: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        primaryKey:true
     },
-    userid: {
+    uId: {
         type: DataTypes.STRING,
         allowNull: false
     },
