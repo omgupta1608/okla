@@ -14,6 +14,6 @@ type Airport{
 }
 
 extend type Query{
-    getAllAirports: String
-    getAirportById(Id: String): String
+    getAllAirports: [Airport!]!
+    getAirportById(ID: String!): Airport
 }

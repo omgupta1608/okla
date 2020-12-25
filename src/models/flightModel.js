@@ -74,5 +74,5 @@ const FlightModel = {
 }
 
 module.exports = {
-    airportModel: sequelize.define('flights', FlightModel)
+    airportModel: FlightModel
 }

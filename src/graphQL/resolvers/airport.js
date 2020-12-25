@@ -1,14 +1,34 @@
-const database = require('../../services/database');
+const { airportModel } = require('../../models'),
+    { ApolloError } = require('apollo-server-express'),
+    { Op } = require('sequelize');
 
 const getAllAirports = (parent, args, context, info) => {
     return new Promise((resolve, reject) => {
-        resolve('ALL AIRPORTS!!!!!!!!!');
+        airportModel.findAll().then(data => {
+            resolve(data);
+        }).catch(error => {
+            reject(new ApolloError(error));
+        });
     });
 }
 
 const getAirportById = (parent, args, context, info) => {
     return new Promise((resolve, reject) => {
-        resolve('SINGLE AIRPORT BY ID - ' + args.Id);
+        airportModel.findOne({
+            where: {
+                aId: {
+                    [Op.eq]: args.ID
+                }
+            }
+        }).then(data => {
+            if (data instanceof airportModel) {
+                resolve(data);
+            } else {
+                reject(new ApolloError('Invalid Type'));
+            }
+        }).catch(error => {
+            reject(new ApolloError(error));
+        });
     });
 }
 

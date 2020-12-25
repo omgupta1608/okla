@@ -30,7 +30,7 @@ const AirportModel = {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    aid: {
+    aId: {
         type: DataTypes.STRING,
         allowNull: false,
         primaryKey:true
@@ -38,5 +38,5 @@ const AirportModel = {
 }
 
 module.exports = {
-    airportModel: sequelize.define('airports', AirportModel)
+    airportModel: AirportModel
 }

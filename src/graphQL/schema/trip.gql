@@ -8,7 +8,7 @@ type Trip{
 }
 
 extend type Query{
-    getAllTrips: String!
-    getUserTrips(userid: String!): String!
-    getTripById(ID: String!): String!
+    getAllTrips: [Trip!]!
+    getUserTrips(uId: String!): [Trip!]!
+    getTripById(ID: String!): Trip
 }

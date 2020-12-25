@@ -1,4 +1,4 @@
-const { userModel } = require('../../models/userModel'),
+const { userModel } = require('../../models'),
     { ApolloError } = require('apollo-server-express'),
     { Op } = require('sequelize');
 

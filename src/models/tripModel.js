@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../services/database').sequelize;
 const TripModel = {
-    tid: {
+    tId: {
         type: DataTypes.STRING,
         allowNull: false,
         primaryKey:true
@@ -29,5 +29,5 @@ const TripModel = {
 };
 
 module.exports = {
-    tripModel: sequelize.define('trips', TripModel)
+    tripModel: TripModel
 }

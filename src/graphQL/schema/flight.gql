@@ -19,6 +19,6 @@ type Flight{
 }
 
 extend type Query{
-    getAllFlights: String!
-    getFlightByNumber(Number: String): String!
+    getAllFlights: [Flight!]!
+    getFlightByNumber(Number: String): Flight
 }

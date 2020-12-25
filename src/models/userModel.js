@@ -42,5 +42,5 @@ const UserModel = {
 }
 
 module.exports = {
-    userModel: sequelize.define('users', UserModel)
+    userModel: UserModel
 }
