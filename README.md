@@ -3,8 +3,8 @@
 ## Features
  - Login
  - Sign Up
- - View Flights
- - View Airports
+ - View Flights ✔
+ - View Airports ✔
  - Book Trip
  - Cancel Trip
 
