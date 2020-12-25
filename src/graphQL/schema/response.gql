@@ -8,3 +8,8 @@ type AuthResponse{
     message: String!
     accessToken: String!
 }
+
+type TripResonse{
+    message: String!
+    tId: String!
+}

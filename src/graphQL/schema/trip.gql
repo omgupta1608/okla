@@ -1,14 +1,25 @@
 type Trip{
     tId: String!
-    userid: String!
+    uId: String!
     fId: String!
     mealOption: String!
     class: String!
     seatNo: String!
 }
 
+input BookTripInput{
+    uId: String!
+    mealOption: String!
+    class: String!
+    fId: String!
+}
+
 extend type Query{
     getAllTrips: [Trip!]!
     getUserTrips(uId: String!): [Trip!]!
     getTripById(ID: String!): Trip
+}
+
+extend type Mutation{
+    bookTrip(info: BookTripInput!): TripResonse!
 }

@@ -5,8 +5,7 @@
  - Sign Up ✔
  - View Flights ✔
  - View Airports ✔
- - Book Trip
- - Cancel Trip
+ - Book Trip ✔
 
 ### TO DO
  - Dynamic Schema Generation

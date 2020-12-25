@@ -5,7 +5,7 @@ const { userModel } = require('../../models'),
     helpers = {
         genUser: (info) => {
             let user = info;
-            user.uId = `U-${user.name.substr(user.name.length - 4)}${user.phone.substr(user.phone.length - 4)}`;
+            user.uId = `U${user.name.substr(user.name.length - 4)}${user.phone.substr(user.phone.length - 4)}`;
             user.isActive = 1;
             user.balance = 0;
 
