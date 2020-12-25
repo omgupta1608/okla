@@ -1,6 +1,8 @@
 # Okla - Airline Ticketing API
 A demo airline ticketing API that implements various features that GraphQL provides.
 
+The database contains 300+ airports.
+
 ## Features
  - Login ✔
  - Sign Up ✔
