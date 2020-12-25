@@ -1,14 +1,15 @@
 const { gql } = require('apollo-server-express');
-const { importTypes } = require('../../utils/middlewares');
+const { readFileSync } = require('fs'),
+    path = require('path');
 
 const stitchSchema = () => {
     return new Promise((resolve, reject) => {
         const schema = gql`
-            ${importTypes('/schema/airport.gql')}
-            ${importTypes('/schema/flight.gql')}
-            ${importTypes('/schema/user.gql')}
-            ${importTypes('/schema/trip.gql')}
-            ${importTypes('/schema/response.gql')}
+            ${readFileSync(path.join(__dirname, '/user.gql')).toString()}
+            ${readFileSync(path.join(__dirname, '/airport.gql')).toString()}
+            ${readFileSync(path.join(__dirname, '/response.gql')).toString()}
+            ${readFileSync(path.join(__dirname, '/trip.gql')).toString()}
+            ${readFileSync(path.join(__dirname, '/flight.gql')).toString()}
             type Query
             type Mutation
         `;
