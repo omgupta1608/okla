@@ -11,8 +11,8 @@ app.use(cors());
 
 start = async () => {
     let schema = await require('./graphQL/schema')();
-    let db = require('./services/database');
-    db.check();
+    //let db = require('./services/database');
+    //db.check();
     const server = new ApolloServer({
         typeDefs: schema,
         resolvers: require('./graphQL/resolvers'),
